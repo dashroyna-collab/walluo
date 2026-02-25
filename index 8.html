@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Marketplace Growth Agency</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;overflow-x:hidden}
+body::before{content:"";position:fixed;width:200%;height:200%;
+background:radial-gradient(circle at 30% 30%, rgba(212,175,55,0.15), transparent 40%),
+radial-gradient(circle at 70% 70%, rgba(255,215,0,0.1), transparent 40%);z-index:-1;}
+.hero{padding:140px 10%;text-align:center}
+h1{font-family:'Playfair Display',serif;font-size:56px;
+background:linear-gradient(to right,#d4af37,#f5e6b3,#d4af37);
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:25px}
+.subtitle{font-size:20px;color:#ccc;margin-bottom:30px}
+.cta-btn{display:inline-block;padding:16px 45px;border:1px solid #d4af37;
+color:#d4af37;text-decoration:none;border-radius:50px;transition:0.4s;letter-spacing:1px}
+.cta-btn:hover{background:#d4af37;color:#000;box-shadow:0 0 30px rgba(212,175,55,0.6)}
+section{padding:120px 10%;text-align:center}
+.card{background:rgba(255,255,255,0.03);border:1px solid rgba(212,175,55,0.3);
+padding:40px;border-radius:20px;margin:25px auto;max-width:700px;transition:0.4s}
+.card:hover{transform:translateY(-10px);border-color:#d4af37}
+h2{font-family:'Playfair Display',serif;font-size:36px;margin-bottom:40px;color:#d4af37}
+input,select{width:100%;padding:14px;margin-top:15px;background:#111;border:1px solid #333;border-radius:10px;color:#fff}
+.calc-box{max-width:500px;margin:auto;padding:40px;border:1px solid #d4af37;border-radius:20px}
+.result{margin-top:25px;font-size:24px;color:#d4af37;font-weight:600}
+footer{padding:60px 10%;text-align:center;font-size:14px;color:#777;border-top:1px solid rgba(212,175,55,0.2)}
+.highlight{color:#d4af37;margin-top:15px}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>Walmart Marketplace Growth Agency</h1>
+<p class="subtitle">Elite Independent Consulting for High-Volume Sellers</p>
+<p class="highlight">Call Now: +1-844-449-4997</p>
+<a href="tel:+18444494997" class="cta-btn">Schedule Private Consultation</a>
+<p style="margin-top:20px;font-size:14px;color:#666;">We are not affiliated with or endorsed by Walmart.</p>
+</div>
+<section>
+<h2>Live Profit Intelligence Calculator</h2>
+<div class="calc-box">
+<label>Product Cost ($)</label>
+<input type="number" id="cost">
+<label>Selling Price ($)</label>
+<input type="number" id="price">
+<label>Referral Fee (%)</label>
+<select id="fee">
+<option value="8">8%</option>
+<option value="10">10%</option>
+<option value="15">15%</option>
+<option value="20">20%</option>
+</select>
+<div class="result" id="result">Estimated Profit: $0</div>
+</div>
+</section>
+<section>
+<h2>Luxury Growth Services</h2>
+<div class="card"><h3>Premium Account Structuring</h3><p>High-level onboarding strategy & operational architecture.</p></div>
+<div class="card"><h3>Conversion-Driven Listing Optimization</h3><p>Data-backed SEO positioning & premium content optimization.</p></div>
+<div class="card"><h3>Advanced Pricing & Margin Scaling</h3><p>Elite pricing intelligence to dominate marketplace positioning.</p></div>
+<div class="card"><h3>Risk Mitigation & Compliance Strategy</h3><p>Professional compliance framework to protect revenue streams.</p></div>
+</section>
+<footer>
+<p>This website provides independent third-party consulting services for marketplace sellers.
+We are not affiliated with, endorsed by, or officially connected to Walmart.
+All trademarks belong to their respective owners.</p>
+</footer>
+<script>
+const costInput=document.getElementById('cost');
+const priceInput=document.getElementById('price');
+const feeSelect=document.getElementById('fee');
+const result=document.getElementById('result');
+function calculate(){
+const cost=parseFloat(costInput.value)||0;
+const price=parseFloat(priceInput.value)||0;
+const feePercent=parseFloat(feeSelect.value)||0;
+const feeAmount=price*(feePercent/100);
+const profit=price-feeAmount-cost;
+result.innerHTML="Estimated Profit: $"+profit.toFixed(2);
+}
+costInput.addEventListener('input',calculate);
+priceInput.addEventListener('input',calculate);
+feeSelect.addEventListener('change',calculate);
+</script>
+</body>
+</html>
